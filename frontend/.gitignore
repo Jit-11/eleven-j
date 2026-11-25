@@ -51,6 +51,3 @@ report.*.json
 Thumbs.db
 .vscode/
 .idea/
-
-package.json
-package-lock.json
