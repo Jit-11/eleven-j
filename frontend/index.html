@@ -1,0 +1,242 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, viewport-fit=cover"
+    />
+    <meta name="referrer" content="no-referrer" />
+    <meta name="theme-color" content="#d8d2c0" />
+    <meta
+      name="description"
+      content="Eleven-J teaches system design and networking through animation and clear explanations."
+    />
+    <title>Eleven-J · Learn System Design & Networking</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=VT323&family=Press+Start+2P&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./src/styles.css" />
+  </head>
+  <body>
+    <header>
+      <div class="bar">
+        <a class="logo" href="#home" aria-label="eleven-j home">eleven-j</a>
+        <nav id="nav">
+          <a href="#home" data-r="home">Home</a
+          ><a href="#case-study" data-r="case-study">Case Study</a
+          ><a href="#blog" data-r="blog">Blog</a
+          ><a href="#subscribe" data-r="subscribe">Subscribe</a
+          ><a href="#contact" data-r="contact">Contact</a>
+        </nav>
+        <button class="btn" id="theme" aria-label="Toggle dark and light mode">
+          ☾ Dark
+        </button>
+      </div>
+    </header>
+
+    <main>
+      <!-- HOME -->
+      <section class="view" id="v-home">
+        <div class="card hero">
+          <div>
+            <h1>Welcome to Eleven-J</h1>
+            <p>
+              Eleven-J teaches every concept of system design and networking
+              through animation, backed by clear, descriptive explanations.
+            </p>
+            <p class="muted">
+              Each idea is shown moving first, so you can see how data flows,
+              then explained in plain words, step by step, so it truly sticks.
+            </p>
+            <div class="row">
+              <a class="btn primary" href="#case-study">Case studies</a
+              ><a class="btn" href="#blog">Read the blog</a>
+            </div>
+          </div>
+          <div
+            id="logoAnim"
+            role="img"
+            aria-label="Eleven-J logo animation"
+          ></div>
+        </div>
+
+        <div class="card">
+          <h2>Every concept, taught two ways</h2>
+          <div class="grid">
+            <div>
+              <span class="tag">1</span><b>Watch it</b>
+              <p class="muted">
+                A short animation shows what happens, such as a request
+                travelling across the network or a server taking load.
+              </p>
+            </div>
+            <div>
+              <span class="tag">2</span><b>Understand it</b>
+              <p class="muted">
+                A descriptive explanation walks through the why and how in
+                simple language, with no skipped steps.
+              </p>
+            </div>
+            <div>
+              <span class="tag">3</span><b>Apply it</b>
+              <p class="muted">
+                Case studies and blog articles connect each concept to real
+                systems you can reason about.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="grid">
+          <div class="card">
+            <h2>About the site</h2>
+            <p>
+              Eleven-J is built for students, self-taught developers and
+              engineers preparing for interviews or growing into bigger
+              projects.
+            </p>
+          </div>
+          <div class="card">
+            <h2>How you learn</h2>
+            <p>
+              Read articles and blog posts, follow case studies step by step,
+              and watch animations that make tricky ideas easy to see.
+            </p>
+          </div>
+          <div class="card">
+            <h2>What we cover</h2>
+            <p>
+              System design and networking, from the basics to real-world
+              architecture.
+            </p>
+          </div>
+        </div>
+
+        <div class="card">
+          <h2>Explore</h2>
+          <div class="row">
+            <a class="btn" href="#case-study">Case Study</a
+            ><a class="btn" href="#blog">Blog</a
+            ><a class="btn" href="#subscribe">Subscribe</a
+            ><a class="btn" href="#contact">Contact</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- CASE STUDY -->
+      <section class="view" id="v-case-study">
+        <h1>Case Study</h1>
+        <div class="card empty">
+          <h2>Nothing here yet</h2>
+          <p class="muted">Case studies will appear on this page.</p>
+        </div>
+      </section>
+
+      <!-- BLOG -->
+      <section class="view" id="v-blog">
+        <h1>Blog</h1>
+        <div class="card empty">
+          <h2>Nothing here yet</h2>
+          <p class="muted">Articles and blog posts will appear on this page.</p>
+        </div>
+      </section>
+
+      <!-- CONTACT -->
+      <section class="view" id="v-contact">
+        <h1>Contact</h1>
+        <div class="card">
+          <p class="muted">Suggest a topic, report a mistake, or say hi.</p>
+          <label for="n">Name</label><input id="n" autocomplete="name" />
+          <label for="e">Email</label
+          ><input id="e" type="email" autocomplete="email" />
+          <label for="m">Message</label><textarea id="m" rows="5"></textarea>
+          <button class="btn primary" id="go">Send message</button>
+          <p id="ok" class="log"></p>
+        </div>
+      </section>
+      <!-- SUBSCRIBE -->
+      <section class="view" id="v-subscribe">
+        <h1>Subscribe</h1>
+        <div class="card narrow">
+          <p>
+            Get new case studies and articles in your inbox. Enter your email
+            and we’ll send a link to confirm it’s really you.
+          </p>
+          <form id="sub-form" novalidate>
+            <label for="sub-email">Email</label>
+            <input
+              id="sub-email"
+              name="email"
+              type="email"
+              inputmode="email"
+              autocomplete="email"
+              maxlength="254"
+              placeholder="you@example.com"
+              required
+              aria-describedby="sub-status"
+            />
+            <button class="btn primary" id="sub-btn" type="submit">
+              Subscribe
+            </button>
+            <p
+              id="sub-status"
+              class="status"
+              role="status"
+              aria-live="polite"
+            ></p>
+          </form>
+        </div>
+      </section>
+
+      <section class="view" id="v-verify-email">
+        <div class="card narrow" id="verify-card" data-state="loading">
+          <h1 id="verify-title">Verifying…</h1>
+          <p id="verify-text" role="status" aria-live="polite">
+            Please wait while we confirm your email.
+          </p>
+          <div class="row">
+            <a class="btn" href="/#home">Back to home</a>
+            <a class="btn" id="verify-retry" href="/#subscribe" hidden
+              >Subscribe again</a
+            >
+          </div>
+        </div>
+      </section>
+
+      <!-- 404 -->
+      <section class="view" id="v-404">
+        <div class="card e404">
+          <svg
+            viewBox="0 0 8 8"
+            aria-hidden="true"
+            shape-rendering="crispEdges"
+          >
+            <rect width="8" height="8" fill="var(--accent)" />
+            <rect x="1" y="2" width="2" height="2" fill="var(--edge)" />
+            <rect x="5" y="2" width="2" height="2" fill="var(--edge)" />
+            <rect x="3" y="4" width="2" height="2" fill="var(--edge)" />
+            <rect x="2" y="5" width="1" height="2" fill="var(--edge)" />
+            <rect x="5" y="5" width="1" height="2" fill="var(--edge)" />
+          </svg>
+          <div class="big">404</div>
+          <h2>Block not found</h2>
+          <p class="muted">
+            This chunk of the website hasn’t been generated. The link may be
+            broken or the page may have moved.
+          </p>
+          <div class="row" style="justify-content: center">
+            <a class="btn primary" href="#home">Back to spawn</a
+            ><a class="btn" href="#contact">Report a broken link</a>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer>Built with blocks · Eleven-J</footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.12.2/lottie.min.js"></script>
+    <script type="module" src="./src/js/main.js"></script>
+  </body>
+</html>
