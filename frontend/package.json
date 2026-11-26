@@ -13,7 +13,9 @@
   "license": "ISC",
   "type": "module",
   "devDependencies": {
-    "vite": "^8.3.8"
+    "@cloudflare/vite-plugin": "^1.70.2",
+    "vite": "^8.3.8",
+    "wrangler": "^4.168.0"
   },
   "dependencies": {
     "detect-libc": "^2.1.2",
