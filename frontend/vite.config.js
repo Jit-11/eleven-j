@@ -1,9 +1,6 @@
 
 import { defineConfig, loadEnv } from 'vite';
 
-// export default defineConfig({
-//       plugins: []
-//     });
 
 export default defineConfig(({ mode }) => {
   plugins: []
