@@ -1,13 +1,13 @@
 
 import { defineConfig, loadEnv } from 'vite';
 
-export default defineConfig({
-      plugins: []
-    });
+// export default defineConfig({
+//       plugins: []
+//     });
 
 export default defineConfig(({ mode }) => {
+  plugins: []
   const env = loadEnv(mode, process.cwd(), '');
-
   return {
     server: {
       port: 3000,
